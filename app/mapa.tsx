@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import MapaView from '../components/MapaView.web';
+import MapaView from '../components/MapaView';
 
 export default function MapaScreen() {
   return (
