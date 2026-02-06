@@ -20,7 +20,12 @@
       },
       "package": "com.tuusuario.miappmapa",
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAuU-lESVH59pQhWoZp1K2zEuvLbgwqymk"
+        }
+      }
     },
     "web": {
       "output": "static",
