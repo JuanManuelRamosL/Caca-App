@@ -6,11 +6,11 @@ import { router } from 'expo-router';
 export default function LoginScreen() {
   const [user, setUser] = useState('');
 
-  const handleLogin = () => {
-    // Al pulsar, navegamos a la pantalla "mapa" usando replace
-    // (replace evita que el usuario pueda volver atrás al login)
+const handleLogin = () => {
+    // Navegamos a la ruta "/mapa". 
+    // Expo Router sabe que está dentro de (tabs) y cargará la barra.
     router.replace('/mapa');
-  };
+};
 
   return (
     <View style={styles.container}>

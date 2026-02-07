@@ -1,20 +1,21 @@
-// app/_layout.tsx
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { useColorScheme } from '@/hooks/use-color-scheme'; // Esto déjalo si ya estaba, si da error bórralo.
+import { useColorScheme } from '@/hooks/use-color-scheme'; // Si tienes este hook, déjalo
 import 'react-native-reanimated';
 
 export default function RootLayout() {
-  // Detectamos si el celular está en modo oscuro o claro
-  const colorScheme = useColorScheme(); 
+  const colorScheme = useColorScheme();
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        {/* Definimos nuestras dos pantallas */}
-        <Stack.Screen name="index" options={{ headerShown: false }} /> 
-        <Stack.Screen name="mapa" options={{ title: 'Mapa de Puntos' }} />
+        {/* Pantalla Login */}
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        
+        {/* CORRECCIÓN AQUÍ: */}
+        {/* En lugar de 'mapa', llamamos al GRUPO '(tabs)' que contiene el mapa y la búsqueda */}
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import MapaView from '../components/MapaView';
+// Nota los dos puntos ../../ para salir de (tabs) y de app
+import MapaView from '../../components/MapaView'; 
 
 export default function MapaScreen() {
   return (
